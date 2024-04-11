@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import flightntIcon from "../../../../public/assets/airplane-icon.svg";
 import flightntIconDark from "../../../../public/assets/airplane-icon-black.svg";
 import bedIcon from "../../../../public/assets/bed-icon.svg";
@@ -9,22 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Box } from "@mui/material";
 import { Navigation } from "./HeaderStyle";
-import { usePathname } from "next/navigation";
+import { NavProps } from "@/app/interfaces/Interfaces";
 
-interface NavProps {
-  color: string;
-}
-
-const Nav: React.FC<NavProps> = ({ color }) => {
+const Nav: React.FC<NavProps> = ({ color, flight, stays }) => {
   const [icon, setIcon] = useState<boolean>(false);
-  const [flight, setFlight] = useState<boolean>(false);
-  const [stays, setStays] = useState<boolean>(false);
-  const pathName = usePathname();
-
-  useEffect(() => {
-    pathName == "/flight" ? setFlight(true) : setFlight(false);
-    pathName == "/stays" ? setStays(true) : setStays(false);
-  }, [pathName]);
 
   useEffect(() => {
     color == "black" ? setIcon(true) : setIcon(false);

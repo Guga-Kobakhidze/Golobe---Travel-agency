@@ -1,5 +1,6 @@
 "use client";
 
+import { MainContextType } from "../interfaces/Interfaces";
 import React, {
   createContext,
   useContext,
@@ -7,11 +8,6 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
-
-interface MainContextType {
-  scroller: boolean;
-  setScroller: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 const MainContext = createContext<MainContextType | undefined>(undefined);
 

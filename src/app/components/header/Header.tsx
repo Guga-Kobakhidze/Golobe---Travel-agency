@@ -1,23 +1,37 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { HeaderMain, LogoStyle, HeaderContent } from "./HeaderStyle";
+import { useMainContext } from "@/app/context/MainContext";
+import { Box, Stack } from "@mui/material";
+import { usePathname } from "next/navigation";
 import Nav from "./Nav";
 import Image from "next/image";
 import Logo from "../../../../public/assets/Logo.svg";
 import LogoDark from "../../../../public/assets/LogoDark.svg";
-import { Box, Stack } from "@mui/material";
-import { HeaderMain, LogoStyle, HeaderContent } from "./HeaderStyle";
 import Link from "next/link";
 import AnyBtn from "../button/Button";
-import { useMainContext } from "@/app/context/MainContext";
 
 const Header = () => {
+  const [flight, setFlight] = useState<boolean>(false);
+  const [stays, setStays] = useState<boolean>(false);
+
   const { scroller } = useMainContext();
+  const pathName = usePathname();
+
+  useEffect(() => {
+    pathName == "/flight" ? setFlight(true) : setFlight(false);
+    pathName == "/stays" ? setStays(true) : setStays(false);
+  }, [pathName]);
 
   return (
     <Box sx={{ ...HeaderMain }} bgcolor={scroller ? "#fff" : ""}>
       <Box className="container" sx={{ ...HeaderContent }}>
-        <Nav color={scroller ? "black" : "white"} />
+        <Nav
+          color={scroller ? "black" : "white"}
+          flight={flight}
+          stays={stays}
+        />
         <Box sx={{ ...LogoStyle }}>
           <Link href={"/"}>
             <Image

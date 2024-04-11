@@ -3,16 +3,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
-
-type ButtonVariant = "text" | "outlined" | "contained";
-
-interface ButtonProps {
-  variant: ButtonVariant;
-  content: string;
-  bgColor?: string;
-  color?: string;
-  href?: string;
-}
+import { ButtonProps } from "@/app/interfaces/Interfaces";
 
 const AnyBtn: React.FC<ButtonProps> = ({
   variant,
