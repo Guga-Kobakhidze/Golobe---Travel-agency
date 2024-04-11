@@ -6,17 +6,19 @@ export const Flex: SxProps = {
   justifyContent: "center",
 };
 
-export const Navigation: SxProps = {
-  ...Flex,
+export const Navigation = (color: string): SxProps => ({
+  display: "flex",
   justifyContent: "start",
   gap: 5,
+
   a: {
     position: "relative",
-    ...Flex,
+    display: "flex",
+    alignItems: "center",
     gap: 0.5,
     textDecoration: "none",
-    color: "#fff",
-    fontsize: 14,
+    color: color || "#fff",
+    fontSize: 14,
 
     "&::before": {
       content: '""',
@@ -33,7 +35,17 @@ export const Navigation: SxProps = {
       width: "100%",
     },
   },
-};
+
+  ".active::before": {
+    content: '""',
+    position: "absolute",
+    bottom: "-22px",
+    left: 0,
+    width: "100%",
+    height: 3,
+    backgroundColor: "#8DD3BB",
+  },
+});
 
 export const HeaderMain: SxProps = {
   position: "fixed",
@@ -42,6 +54,7 @@ export const HeaderMain: SxProps = {
   right: 0,
   padding: "36px 32px",
   zIndex: 999,
+  transition: "0.3s",
 };
 
 export const HeaderContent: SxProps = {
