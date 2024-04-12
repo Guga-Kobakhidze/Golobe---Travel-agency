@@ -6,12 +6,20 @@ export const Flex: SxProps = {
   justifyContent: "center",
 };
 
+export const LogoStyle: SxProps = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+};
+
 export const Navigation = (color: string): SxProps => ({
+  position: "relative",
   display: "flex",
   justifyContent: "start",
   gap: 5,
 
-  a: {
+  "a, h4": {
     position: "relative",
     display: "flex",
     alignItems: "center",
@@ -19,11 +27,12 @@ export const Navigation = (color: string): SxProps => ({
     textDecoration: "none",
     color: color || "#fff",
     fontSize: 14,
+    cursor: "pointer",
 
     "&::before": {
       content: '""',
       position: "absolute",
-      bottom: "-22px",
+      bottom: "-18px",
       left: 0,
       width: 0,
       height: 3,
@@ -39,10 +48,16 @@ export const Navigation = (color: string): SxProps => ({
   ".active::before": {
     content: '""',
     position: "absolute",
-    bottom: "-22px",
+    bottom: "-18px",
     left: 0,
     width: "100%",
     height: 3,
+    backgroundColor: "#8DD3BB",
+  },
+
+  ".line": {
+    height: "40px",
+    width: "1px",
     backgroundColor: "#8DD3BB",
   },
 });
@@ -60,11 +75,4 @@ export const HeaderMain: SxProps = {
 export const HeaderContent: SxProps = {
   ...Flex,
   justifyContent: "space-between",
-};
-
-export const LogoStyle: SxProps = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
 };

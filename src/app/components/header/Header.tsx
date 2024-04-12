@@ -10,7 +10,7 @@ import Image from "next/image";
 import Logo from "../../../../public/assets/Logo.svg";
 import LogoDark from "../../../../public/assets/LogoDark.svg";
 import Link from "next/link";
-import AnyBtn from "../button/Button";
+import BtnComponent from "../button/Button";
 
 const Header = () => {
   const [flight, setFlight] = useState<boolean>(false);
@@ -31,6 +31,7 @@ const Header = () => {
           color={scroller ? "black" : "white"}
           flight={flight}
           stays={stays}
+          navigation={true}
         />
         <Box sx={{ ...LogoStyle }}>
           <Link href={"/"}>
@@ -43,14 +44,14 @@ const Header = () => {
           </Link>
         </Box>
         <Stack spacing={3} direction="row">
-          <AnyBtn
+          <BtnComponent
             variant="text"
             content="Log In"
             color={scroller ? "black" : "white"}
             bgColor="transparent"
             href="log-in"
           />
-          <AnyBtn
+          <BtnComponent
             variant="contained"
             content="Sign Up"
             bgColor={scroller ? "black" : "white"}

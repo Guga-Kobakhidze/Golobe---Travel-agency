@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { mainbackground } from "./MainBgStyle";
+import SearchModal from "../search-modal/SearchModal";
 
 const MainBg = () => {
   return (
-    <Box sx={{ ...mainbackground }}>
+    <Box sx={{ ...mainbackground }} mb={40}>
       <Box position={"relative"} zIndex={5} pt={20}>
         <Typography fontWeight={700} variant="h3">
           Helping Others
@@ -16,6 +17,7 @@ const MainBg = () => {
           Special offers to suit your plan
         </Typography>
       </Box>
+      <SearchModal />
       <Box className="bg-overlay"></Box>
     </Box>
   );

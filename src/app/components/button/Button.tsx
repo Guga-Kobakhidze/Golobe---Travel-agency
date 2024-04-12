@@ -5,12 +5,13 @@ import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
 import { ButtonProps } from "@/app/interfaces/Interfaces";
 
-const AnyBtn: React.FC<ButtonProps> = ({
+const BtnComponent: React.FC<ButtonProps> = ({
   variant,
   content,
   bgColor,
   color,
   href,
+  btnFunc,
 }) => {
   const router = useRouter();
 
@@ -20,7 +21,7 @@ const AnyBtn: React.FC<ButtonProps> = ({
 
   return (
     <Button
-      onClick={handleClick}
+      onClick={href ? handleClick : btnFunc}
       variant={variant}
       sx={{
         bgcolor: bgColor,
@@ -36,4 +37,4 @@ const AnyBtn: React.FC<ButtonProps> = ({
   );
 };
 
-export default AnyBtn;
+export default BtnComponent;
