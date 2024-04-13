@@ -48,10 +48,11 @@ export interface SearchFormProps {
 }
 
 export interface SearchState {
-  fromTo: string;
+  title: string;
+  location: string;
   date: string;
-  passenger: string;
-  trip: string;
+  person: string;
+  return: string;
   promoCode: string;
 }
 

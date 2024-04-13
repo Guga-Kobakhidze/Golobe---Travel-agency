@@ -4,8 +4,8 @@ import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { SearchContent } from "./SearchModalStyle";
 import Nav from "../header/Nav";
-import SearchForm from "./SearchForm";
 import { Flights, Passenger } from "@/data/FormData";
+import FlightForm from "./FlightForm";
 
 const SearchModal = () => {
   const [flightForm, setFlightForm] = useState<boolean>(true);
@@ -38,7 +38,7 @@ const SearchModal = () => {
         stays={staysForm}
       />
       <Box>
-        <SearchForm fromToData={FlightData} passData={PassengerData} />
+        <FlightForm fromToData={FlightData} passData={PassengerData} />
       </Box>
     </Box>
   );
