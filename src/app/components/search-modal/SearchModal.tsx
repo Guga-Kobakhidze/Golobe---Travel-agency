@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { SearchContent } from "./SearchModalStyle";
 import Nav from "../header/Nav";
 import SearchForm from "./SearchForm";
-import { Flights, passenger } from "@/data/FormData";
+import { Flights, Passenger } from "@/data/FormData";
 
 const SearchModal = () => {
   const [flightForm, setFlightForm] = useState<boolean>(true);
@@ -13,7 +13,7 @@ const SearchModal = () => {
   // const [pathName, setPathName] = useState<string>("flight");
 
   const FlightData = Flights;
-  const PassengerData = passenger;
+  const PassengerData = Passenger;
 
   const flightClick = () => {
     setFlightForm(true);

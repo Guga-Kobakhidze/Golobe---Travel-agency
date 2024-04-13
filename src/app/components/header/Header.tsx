@@ -10,7 +10,7 @@ import Image from "next/image";
 import Logo from "../../../../public/assets/Logo.svg";
 import LogoDark from "../../../../public/assets/LogoDark.svg";
 import Link from "next/link";
-import BtnComponent from "../button/Button";
+import BtnComponent from "../button/BtnComponent";
 
 const Header = () => {
   const [flight, setFlight] = useState<boolean>(false);

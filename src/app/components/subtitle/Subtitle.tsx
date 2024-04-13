@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import BtnComponent from "../button/Button";
+import BtnComponent from "../button/BtnComponent";
 import { SubtitileBox } from "./SubtitleStyle";
 
 interface SubtitleProps {

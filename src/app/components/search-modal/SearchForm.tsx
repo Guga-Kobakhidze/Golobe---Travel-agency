@@ -9,10 +9,8 @@ import {
 import React, { useRef, useState } from "react";
 import { FormStyle, SearchFormStyle, Buttons } from "./SearchModalStyle";
 import { SearchFormProps, SearchState } from "@/app/interfaces/Interfaces";
-import FromToIcon from "../../../../public/assets/fromTo.svg";
-import Image from "next/image";
 import PromoCode from "./PromoCode";
-import BtnComponent from "../button/Button";
+import BtnComponent from "../button/BtnComponent";
 
 const SearchForm: React.FC<SearchFormProps> = ({ fromToData, passData }) => {
   const FromToRef = useRef<HTMLSelectElement | null>(null);
