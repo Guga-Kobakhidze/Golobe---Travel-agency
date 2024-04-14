@@ -18,6 +18,7 @@ import {
   Buttons,
   ButtonStyle,
 } from "./SearchModalStyle";
+import BtnToggle from "../button/BtnToggle";
 
 const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
   const [dateChange, setDateChange] = useState<boolean>(false);
@@ -113,9 +114,13 @@ const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
       </Box>
       <Box sx={{ ...Buttons }}>
         {showPromo && <PromoCode currentRef={PromoCodeRef} />}
-        <Button sx={{ ...ButtonStyle }} variant="text" onClick={ShowPromo}>
-          + Add Promo Code
-        </Button>
+        <BtnToggle
+          variant="text"
+          toggle={ShowPromo}
+          content="+ Add Promo Code"
+          color="black"
+          bgColor="transparent"
+        />
         <BtnComponent
           content="Show Filghts"
           variant="contained"

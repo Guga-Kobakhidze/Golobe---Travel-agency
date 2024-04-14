@@ -10,14 +10,6 @@ const useSearchForm = () => {
 
   const [title, setTitle] = useState<string>("");
   const [showPromo, setShowPromo] = useState<boolean>(false);
-  // const [filledForm, setFilledForm] = useState<SearchState>({
-  //   title: "",
-  //   location: "",
-  //   date: "",
-  //   person: "",
-  //   return: "",
-  //   promoCode: "",
-  // });
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +38,6 @@ const useSearchForm = () => {
     PromoCodeRef,
     showPromo,
     ShowPromo,
-    // filledForm,
     setTitle,
     onSubmit,
   };

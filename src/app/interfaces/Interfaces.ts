@@ -11,6 +11,14 @@ export interface ButtonProps {
   btnFunc?: () => void;
 }
 
+export interface BtnToggleProps {
+  variant: ButtonVariant;
+  content: string;
+  toggle: () => void;
+  bgColor?: string;
+  color?: string;
+}
+
 // Nav Props
 
 export interface NavProps {
