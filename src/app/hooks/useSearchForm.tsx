@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { SearchState } from "../interfaces/Interfaces";
 
 const useSearchForm = () => {
   const LocationRef = useRef<HTMLSelectElement | null>(null);
@@ -23,7 +22,7 @@ const useSearchForm = () => {
       promoCode: PromoCodeRef.current?.value || "",
     };
 
-    console.log(filledForm);
+    // console.log(filledForm);
   };
 
   const ShowPromo = () => {

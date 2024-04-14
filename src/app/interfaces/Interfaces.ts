@@ -5,8 +5,8 @@ type ButtonVariant = "text" | "outlined" | "contained";
 export interface ButtonProps {
   variant: ButtonVariant;
   content: string;
-  bgColor?: string;
-  color?: string;
+  bgColor: string;
+  color: string;
   href?: string;
   btnFunc?: () => void;
 }
@@ -57,6 +57,18 @@ export interface SearchFormProps {
   passData: PassData[];
 }
 
+interface TripCardsData {
+  img: string;
+  title: string;
+  flight: string;
+  hotel: string;
+  resort: string;
+}
+
+export interface TripCardsProps {
+  cardsList: TripCardsData[];
+}
+
 export interface SearchState {
   title: string;
   location: string;
@@ -66,8 +78,16 @@ export interface SearchState {
   promoCode: string;
 }
 
-// PromoCode
+// PromoCode interface
 
 export interface PromoCodeProps {
   currentRef: React.RefObject<HTMLInputElement>;
+}
+
+// Subtitle interface
+
+export interface SubtitleProps {
+  title: string;
+  paragraph: string;
+  btnContent: string;
 }

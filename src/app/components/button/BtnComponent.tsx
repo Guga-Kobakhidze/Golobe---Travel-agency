@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Button from "@mui/material/Button";
 import { useRouter } from "next/navigation";
 import { ButtonProps } from "@/app/interfaces/Interfaces";
+import { Button } from "@mui/material";
 
 const BtnComponent: React.FC<ButtonProps> = ({
   variant,

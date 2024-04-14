@@ -1,13 +1,8 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
 import BtnComponent from "../button/BtnComponent";
+import { Box, Typography } from "@mui/material";
+import { SubtitleProps } from "@/app/interfaces/Interfaces";
 import { SubtitileBox } from "./SubtitleStyle";
-
-interface SubtitleProps {
-  title: string;
-  paragraph: string;
-  btnContent: string;
-}
 
 const Subtitle: React.FC<SubtitleProps> = ({
   title,

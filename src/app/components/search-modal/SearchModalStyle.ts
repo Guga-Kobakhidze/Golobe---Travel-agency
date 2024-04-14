@@ -29,12 +29,6 @@ export const FormStyle: SxProps = {
   width: 324,
   height: 56,
 
-  // span: {
-  //   position: "absolute",
-  //   right: "16px",
-  //   top: "18px",
-  // },
-
   ".MuiSelect-select": {
     textAlign: "start",
   },
