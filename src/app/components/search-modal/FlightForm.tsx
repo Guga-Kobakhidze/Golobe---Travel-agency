@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { SearchFormProps } from "@/app/interfaces/Interfaces";
+import { FormStyle, SearchFormStyle, Buttons } from "./SearchModalStyle";
 import PromoCode from "./PromoCode";
 import BtnComponent from "../button/BtnComponent";
 import useSearchForm from "@/app/hooks/useSearchForm";
+import BtnToggle from "../button/BtnToggle";
 import {
   Box,
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
-import {
-  FormStyle,
-  SearchFormStyle,
-  Buttons,
-  ButtonStyle,
-} from "./SearchModalStyle";
-import BtnToggle from "../button/BtnToggle";
 
-const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
+const FlightForm: React.FC<SearchFormProps> = ({
+  locationData,
+  passData,
+  path = "",
+}) => {
   const [dateChange, setDateChange] = useState<boolean>(false);
   const {
     DateRef,
@@ -37,7 +35,7 @@ const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
   const NoIcon = () => null;
 
   useEffect(() => {
-    locationData && setTitle("Flight");
+    locationData && setTitle(path);
   }, [locationData]);
 
   return (

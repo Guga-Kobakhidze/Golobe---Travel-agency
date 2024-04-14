@@ -42,9 +42,17 @@ const SearchModal = () => {
       />
       <Box>
         {pathName === "flight" ? (
-          <FlightForm locationData={FlightData} passData={PassengerData} />
+          <FlightForm
+            locationData={FlightData}
+            passData={PassengerData}
+            path={pathName}
+          />
         ) : (
-          <StaysForm locationData={StaysData} passData={RoomGuestsData} />
+          <StaysForm
+            locationData={StaysData}
+            passData={RoomGuestsData}
+            path="Stays"
+          />
         )}
       </Box>
     </Box>

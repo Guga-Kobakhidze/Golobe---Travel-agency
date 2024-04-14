@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { SearchFormProps } from "@/app/interfaces/Interfaces";
+import { FormStyle, SearchFormStyle, Buttons } from "./SearchModalStyle";
 import PromoCode from "./PromoCode";
 import BtnComponent from "../button/BtnComponent";
 import useSearchForm from "@/app/hooks/useSearchForm";
+import BtnToggle from "../button/BtnToggle";
 import {
   Box,
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
-import {
-  FormStyle,
-  SearchFormStyle,
-  Buttons,
-  ButtonStyle,
-} from "./SearchModalStyle";
-import BtnToggle from "../button/BtnToggle";
 
-const StaysForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
+const StaysForm: React.FC<SearchFormProps> = ({
+  locationData,
+  passData,
+  path = "",
+}) => {
   const [dateChange, setDateChange] = useState<boolean>(false);
   const [returnDateChange, setReturnDateChange] = useState<boolean>(false);
   const {
@@ -38,7 +36,7 @@ const StaysForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
   const NoIcon = () => null;
 
   useEffect(() => {
-    locationData && setTitle("Stays");
+    locationData && setTitle(path);
   }, [locationData]);
 
   return (
