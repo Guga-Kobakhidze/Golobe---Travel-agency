@@ -32,18 +32,20 @@ export interface MainContextType {
 // Form Interfaces
 
 interface FromToData {
-  from: string;
-  to: string;
+  from?: string;
+  to?: string;
 }
 
 interface PassData {
-  passenger: string;
-  class: string;
+  passenger?: string;
+  class?: string;
+  room?: string;
+  guest?: string;
 }
 
 export interface SearchFormProps {
   path?: string;
-  fromToData: FromToData[];
+  locationData: FromToData[];
   passData: PassData[];
 }
 

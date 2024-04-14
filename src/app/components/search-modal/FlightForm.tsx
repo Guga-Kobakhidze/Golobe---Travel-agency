@@ -13,7 +13,7 @@ import PromoCode from "./PromoCode";
 import BtnComponent from "../button/BtnComponent";
 import useSearchForm from "@/app/hooks/useSearchForm";
 
-const FlightForm: React.FC<SearchFormProps> = ({ fromToData, passData }) => {
+const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
   const [dateChange, setDateChange] = useState<boolean>(false);
   const {
     DateRef,
@@ -31,10 +31,8 @@ const FlightForm: React.FC<SearchFormProps> = ({ fromToData, passData }) => {
   const NoIcon = () => null;
 
   useEffect(() => {
-    fromToData ? setTitle("Flight") : setTitle("Stays");
-  }, [fromToData]);
-
-  // console.log(filledForm);
+    locationData && setTitle("Flight");
+  }, [locationData]);
 
   return (
     <Box component="form" onSubmit={onSubmit}>
@@ -52,7 +50,7 @@ const FlightForm: React.FC<SearchFormProps> = ({ fromToData, passData }) => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {fromToData.map((place, index) => (
+            {locationData.map((place, index) => (
               <MenuItem key={index} value={`${place.from} - ${place.to}`}>
                 {`${place.from} - ${place.to}`}
               </MenuItem>
