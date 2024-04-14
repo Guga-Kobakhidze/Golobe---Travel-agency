@@ -1,17 +1,23 @@
+import React, { useEffect, useState } from "react";
+import { SearchFormProps } from "@/app/interfaces/Interfaces";
+import PromoCode from "./PromoCode";
+import BtnComponent from "../button/BtnComponent";
+import useSearchForm from "@/app/hooks/useSearchForm";
 import {
   Box,
+  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { FormStyle, SearchFormStyle, Buttons } from "./SearchModalStyle";
-import { SearchFormProps } from "@/app/interfaces/Interfaces";
-import PromoCode from "./PromoCode";
-import BtnComponent from "../button/BtnComponent";
-import useSearchForm from "@/app/hooks/useSearchForm";
+import {
+  FormStyle,
+  SearchFormStyle,
+  Buttons,
+  ButtonStyle,
+} from "./SearchModalStyle";
 
 const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
   const [dateChange, setDateChange] = useState<boolean>(false);
@@ -22,7 +28,6 @@ const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
     PromoCodeRef,
     ReturnRef,
     ShowPromo,
-    filledForm,
     onSubmit,
     setTitle,
     showPromo,
@@ -108,13 +113,9 @@ const FlightForm: React.FC<SearchFormProps> = ({ locationData, passData }) => {
       </Box>
       <Box sx={{ ...Buttons }}>
         {showPromo && <PromoCode currentRef={PromoCodeRef} />}
-        <BtnComponent
-          content="+ Add Promo Code"
-          variant="text"
-          bgColor="transparent"
-          color="black"
-          btnFunc={ShowPromo}
-        />
+        <Button sx={{ ...ButtonStyle }} variant="text" onClick={ShowPromo}>
+          + Add Promo Code
+        </Button>
         <BtnComponent
           content="Show Filghts"
           variant="contained"

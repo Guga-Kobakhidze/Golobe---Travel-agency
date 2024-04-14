@@ -21,7 +21,7 @@ const BtnComponent: React.FC<ButtonProps> = ({
 
   return (
     <Button
-      type={!href ? "submit" : "button"}
+      type={href ? "button" : "submit"}
       onClick={href ? handleClick : btnFunc}
       variant={variant}
       sx={{

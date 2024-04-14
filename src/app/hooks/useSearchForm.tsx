@@ -10,25 +10,28 @@ const useSearchForm = () => {
 
   const [title, setTitle] = useState<string>("");
   const [showPromo, setShowPromo] = useState<boolean>(false);
-  const [filledForm, setFilledForm] = useState<SearchState>({
-    title: "",
-    location: "",
-    date: "",
-    person: "",
-    return: "",
-    promoCode: "",
-  });
+  // const [filledForm, setFilledForm] = useState<SearchState>({
+  //   title: "",
+  //   location: "",
+  //   date: "",
+  //   person: "",
+  //   return: "",
+  //   promoCode: "",
+  // });
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFilledForm({
+
+    const filledForm = {
       title: title,
       location: LocationRef.current?.value || "",
       date: DateRef.current?.value || "",
       person: PersonRef.current?.value || "",
       return: ReturnRef.current?.value || "",
       promoCode: PromoCodeRef.current?.value || "",
-    });
+    };
+
+    console.log(filledForm);
   };
 
   const ShowPromo = () => {
@@ -43,7 +46,7 @@ const useSearchForm = () => {
     PromoCodeRef,
     showPromo,
     ShowPromo,
-    filledForm,
+    // filledForm,
     setTitle,
     onSubmit,
   };

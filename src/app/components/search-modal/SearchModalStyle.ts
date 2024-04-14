@@ -60,3 +60,8 @@ export const PromoCodeStyle: SxProps = {
   bottom: 20,
   right: 360,
 };
+
+export const ButtonStyle: SxProps = {
+  backgroundColor: "transparent",
+  color: "black",
+};

@@ -1,10 +1,10 @@
 "use client";
 
-import { Box } from "@mui/material";
 import React, { useState } from "react";
+import { Box } from "@mui/material";
+import { Flights, Passenger, RoomGuests, Stays } from "@/data/FormData";
 import { SearchContent } from "./SearchModalStyle";
 import Nav from "../header/Nav";
-import { Flights, Passenger, RoomGuests, Stays } from "@/data/FormData";
 import FlightForm from "./FlightForm";
 import StaysForm from "./StaysForm";
 
@@ -44,7 +44,7 @@ const SearchModal = () => {
         {pathName === "flight" ? (
           <FlightForm locationData={FlightData} passData={PassengerData} />
         ) : (
-          <StaysForm locationData={StaysData} passData={RoomGuests} />
+          <StaysForm locationData={StaysData} passData={RoomGuestsData} />
         )}
       </Box>
     </Box>
