@@ -1,23 +1,29 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Box, Typography } from "@mui/material";
 import { TripCarBox } from "./TripCardStyle";
-import Image from "next/image";
-import React from "react";
+import { TripCardsData } from "@/app/interfaces/Interfaces";
 
-const TripCard = () => {
+const TripCard: React.FC<TripCardsData> = ({
+  img,
+  title,
+  flight,
+  hotel,
+  resort,
+}) => {
   return (
     <Box sx={{ ...TripCarBox }}>
-      <Image
-        src={"assets/TripCards/TripCard1.svg"}
-        alt="Trip Card 1"
-        width={90}
-        height={90}
-      />
-      <Box>
+      <Image src={img} alt="Trip Card 1" width={90} height={90} />
+      <Box className="card-content">
         <Typography variant="h6" color={"#112211"}>
-          Istanbul, Turkey
+          {title}
         </Typography>
         <Typography variant="body2" color={"#000"}>
-          <span>Flights</span> • <span>Hotels</span> • <span>Resorts</span>
+          <Link href={"#"} className="n-p">
+            {flight}
+          </Link>
+          • <Link href={"#"}>{hotel}</Link> •<Link href={"#"}>{resort}</Link>
         </Typography>
       </Box>
     </Box>

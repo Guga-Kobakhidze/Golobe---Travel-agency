@@ -2,19 +2,24 @@ import React from "react";
 import Subtitle from "../subtitle/Subtitle";
 import TripCardList from "./TripCardList";
 import { Box } from "@mui/material";
-import { AllTripsData } from "@/data/TripsData";
+import { AllLinksCard, AllTripsData } from "@/data/TripsData";
+import LinkCardList from "../link-card/LinkCardList";
 
 const TripComponent = () => {
   const TripCardsData = AllTripsData;
+  const LinkCardsData = AllLinksCard;
 
   return (
-    <Box className="container">
-      <Subtitle
-        title="Plan your perfect trip"
-        paragraph="Search Flights & Places Hire to our most popular destinations"
-        btnContent="See more places"
-      />
-      <TripCardList cardsList={TripCardsData} />
+    <Box mb={10}>
+      <Box className="container">
+        <Subtitle
+          title="Plan your perfect trip"
+          paragraph="Search Flights & Places Hire to our most popular destinations"
+          btnContent="See more places"
+        />
+        <TripCardList cardsList={TripCardsData} />
+        <LinkCardList cardsList={LinkCardsData} />
+      </Box>
     </Box>
   );
 };

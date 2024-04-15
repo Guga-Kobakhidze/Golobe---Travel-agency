@@ -10,9 +10,13 @@ export const SearchContent: SxProps = {
   zIndex: 10,
 
   bgcolor: "white",
-  boxShadow: "5px 20px 50px gray",
+  boxShadow: "0px 4px 8px rgba(141, 211, 187, 0.3)",
   borderRadius: "16px",
   padding: "32px",
+
+  "@media (max-width: 1024px)": {
+    width: "95%",
+  },
 };
 
 export const SearchFormStyle: SxProps = {

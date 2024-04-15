@@ -57,7 +57,7 @@ export interface SearchFormProps {
   passData: PassData[];
 }
 
-interface TripCardsData {
+export interface TripCardsData {
   img: string;
   title: string;
   flight: string;
@@ -67,6 +67,19 @@ interface TripCardsData {
 
 export interface TripCardsProps {
   cardsList: TripCardsData[];
+}
+
+// Link Cards interface
+
+export interface LinkCardsData {
+  img: string;
+  title: string;
+  desc: string;
+  link: string;
+}
+
+export interface LinkCardsProps {
+  cardsList: LinkCardsData[];
 }
 
 export interface SearchState {

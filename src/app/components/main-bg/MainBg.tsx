@@ -5,7 +5,7 @@ import SearchModal from "../search-modal/SearchModal";
 
 const MainBg = () => {
   return (
-    <Box sx={{ ...mainbackground }} mb={40}>
+    <Box sx={{ ...mainbackground }} mb={35}>
       <Box position={"relative"} zIndex={5} pt={20}>
         <Typography fontWeight={700} variant="h3">
           Helping Others

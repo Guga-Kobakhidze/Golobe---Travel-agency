@@ -7,6 +7,7 @@ export const Flex: SxProps = {
 };
 
 export const SubtitileBox: SxProps = {
+  padding: "0 55px",
   ...Flex,
   button: {
     border: "1px solid #8DD3BB",
@@ -21,5 +22,9 @@ export const SubtitileBox: SxProps = {
     flexDirection: "column",
     alignItems: "start",
     gap: "10px",
+  },
+
+  "@media (max-width: 900px)": {
+    padding: 0,
   },
 };

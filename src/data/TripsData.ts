@@ -63,3 +63,18 @@ export const AllTripsData = [
     resort: "Resorts",
   },
 ];
+
+export const AllLinksCard = [
+  {
+    img: "assets/LinkCards/flightLinkCard.svg",
+    title: "Filghts",
+    desc: "Search Flights & Places Hire to our most popular destinations",
+    link: "flight",
+  },
+  {
+    img: "assets/LinkCards/staysLinkCard.svg",
+    title: "Hotels",
+    desc: "Search Flights & Places Hire to our most popular destinations",
+    link: "stays",
+  },
+];
