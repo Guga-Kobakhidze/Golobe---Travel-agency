@@ -11,7 +11,7 @@ const TripComponent = () => {
 
   return (
     <Box mb={10}>
-      <Box className="container">
+      <Box>
         <Subtitle
           title="Plan your perfect trip"
           paragraph="Search Flights & Places Hire to our most popular destinations"

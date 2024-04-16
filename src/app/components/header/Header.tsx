@@ -25,7 +25,11 @@ const Header = () => {
   }, [pathName]);
 
   return (
-    <Box sx={{ ...HeaderMain }} bgcolor={scroller ? "#fff" : ""}>
+    <Box
+      sx={{ ...HeaderMain }}
+      bgcolor={scroller ? "#fff" : ""}
+      boxShadow={scroller ? "0px 0px 20px gray" : ""}
+    >
       <Box className="container" sx={{ ...HeaderContent }}>
         <Nav
           color={scroller ? "black" : "white"}
