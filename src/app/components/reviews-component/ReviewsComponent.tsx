@@ -11,7 +11,7 @@ const ReviewsComponent = () => {
         paragraph="What people says about Golobe facilities"
         btnContent="See All"
       />
-      <Box p={"0 45px"}>
+      <Box p={"0 55px"}>
         <ReviewsList />
       </Box>
     </Box>
