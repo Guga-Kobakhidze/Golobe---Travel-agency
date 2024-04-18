@@ -57,6 +57,8 @@ export interface SearchFormProps {
   passData: PassData[];
 }
 
+// Trip Cards Interfaces
+
 export interface TripCardsData {
   img: string;
   title: string;
@@ -67,6 +69,25 @@ export interface TripCardsData {
 
 export interface TripCardsProps {
   cardsList: TripCardsData[];
+}
+
+// Reviews cards Interfaces
+
+export interface ReviewsCards {
+  title: string;
+  desc: string;
+  link: string;
+  stars: number;
+  author: string;
+  company: string;
+  locationImg: string;
+  locationTitle: string;
+  locationLink: string;
+  img: string;
+}
+
+export interface ReviewsCardProps {
+  reviewCardList: ReviewsCards[];
 }
 
 // Link Cards interface

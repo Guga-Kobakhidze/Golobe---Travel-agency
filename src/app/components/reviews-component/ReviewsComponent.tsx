@@ -2,8 +2,11 @@ import { Box } from "@mui/material";
 import React from "react";
 import ReviewsList from "./ReviewsList";
 import Subtitle from "../subtitle/Subtitle";
+import { ReviewsCards } from "@/data/ReviewsData";
 
 const ReviewsComponent = () => {
+  const ReviewsCardData = ReviewsCards;
+
   return (
     <Box>
       <Subtitle
@@ -12,7 +15,7 @@ const ReviewsComponent = () => {
         btnContent="See All"
       />
       <Box p={"0 55px"}>
-        <ReviewsList />
+        <ReviewsList reviewCardList={ReviewsCardData} />
       </Box>
     </Box>
   );
