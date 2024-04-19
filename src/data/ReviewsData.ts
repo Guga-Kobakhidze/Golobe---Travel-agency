@@ -1,5 +1,6 @@
 export const ReviewsCards = [
   {
+    id: 1,
     title: "“A real sense of community, nurtured”",
     desc: "Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for ",
     link: "#",
@@ -12,6 +13,7 @@ export const ReviewsCards = [
     img: "/assets/ReviewsCards/ReviewsCard1.svg",
   },
   {
+    id: 2,
     title: "“The facilities are superb. Clean, slick, bright.”",
     desc: "“A real sense of community, nurtured”Really appreciate the help and support from the staff ",
     link: "#",
@@ -24,6 +26,7 @@ export const ReviewsCards = [
     img: "/assets/ReviewsCards/ReviewsCard2.svg",
   },
   {
+    id: 3,
     title: "“A real sense of community, nurtured”",
     desc: "Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for",
     link: "#",

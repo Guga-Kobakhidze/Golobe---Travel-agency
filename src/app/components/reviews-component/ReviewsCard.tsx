@@ -6,6 +6,7 @@ import React from "react";
 import { ReviewsCards } from "@/app/interfaces/Interfaces";
 
 const ReviewsCard: React.FC<ReviewsCards> = ({
+  id,
   title,
   desc,
   link,
@@ -18,7 +19,7 @@ const ReviewsCard: React.FC<ReviewsCards> = ({
   img,
 }) => {
   return (
-    <Box sx={{ ...ReviewsCardBox }} mb={3}>
+    <Box sx={{ ...ReviewsCardBox }} mb={3} key={id}>
       <Typography variant="h4" className="title">
         {title}
       </Typography>

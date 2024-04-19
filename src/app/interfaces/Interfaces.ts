@@ -74,6 +74,7 @@ export interface TripCardsProps {
 // Reviews cards Interfaces
 
 export interface ReviewsCards {
+  id: number;
   title: string;
   desc: string;
   link: string;

@@ -8,6 +8,7 @@ const ReviewsList: React.FC<ReviewsCardProps> = ({ reviewCardList }) => {
     <Box display={"flex"} gap={6} sx={{ overflow: "hidden" }}>
       {reviewCardList.map((card) => (
         <ReviewsCard
+          id={card.id}
           title={card.title}
           desc={card.desc}
           link={card.link}
