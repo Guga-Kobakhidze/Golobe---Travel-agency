@@ -45,7 +45,9 @@ const ReviewsCard: React.FC<ReviewsCards> = ({
           {locationTitle}
         </Link>
       </Box>
-      <Image src={img} width={377} height={200} alt={title} />
+      <Box className="imageBox">
+        <img src={img} alt={title} />
+      </Box>
     </Box>
   );
 };

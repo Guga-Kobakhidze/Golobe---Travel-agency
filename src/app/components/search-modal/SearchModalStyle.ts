@@ -2,7 +2,7 @@ import { SxProps } from "@mui/material";
 
 export const SearchContent: SxProps = {
   //   height: 280,
-  width: "70%",
+  width: "85%",
   position: "absolute",
   top: "105%",
   left: "50%",

@@ -1,5 +1,33 @@
 import { SxProps } from "@mui/material";
 
+export const ReviewsSwiperBox: SxProps = {
+  ".swiper-container": {
+    ".swiper-button-prev, .swiper-button-next": {
+      display: "none",
+      color: "black",
+      transition: "0.3s",
+
+      "&:hover": {
+        color: "#8DD3BB",
+      },
+
+      "&::after": {
+        fontSize: "28px",
+      },
+    },
+
+    " .swiper-button-next": {
+      right: "-2px",
+    },
+  },
+
+  "&:hover": {
+    ".swiper-button-prev, .swiper-button-next": {
+      display: "block",
+    },
+  },
+};
+
 export const ReviewsCardBox: SxProps = {
   position: "relative",
   width: 378,
@@ -89,5 +117,18 @@ export const ReviewsCardBox: SxProps = {
     backgroundColor: "rgba(141, 211, 187, 0.4)",
     borderRadius: "20px",
     zIndex: -1,
+  },
+
+  ".imageBox": {
+    width: "100%",
+    height: "200px",
+    borderRadius: "20px",
+    overflow: "hidden",
+
+    img: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    },
   },
 };

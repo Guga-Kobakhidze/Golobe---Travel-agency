@@ -8,7 +8,7 @@ const ReviewsComponent = () => {
   const ReviewsCardData = ReviewsCards;
 
   return (
-    <Box>
+    <Box mb={10}>
       <Subtitle
         title="Reviews"
         paragraph="What people says about Golobe facilities"
