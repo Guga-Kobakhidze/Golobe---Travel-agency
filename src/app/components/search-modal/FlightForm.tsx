@@ -54,8 +54,8 @@ const FlightForm: React.FC<SearchFormProps> = ({
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {locationData.map((place, index) => (
-              <MenuItem key={index} value={`${place.from} - ${place.to}`}>
+            {locationData.map((place) => (
+              <MenuItem key={place.id} value={`${place.from} - ${place.to}`}>
                 {`${place.from} - ${place.to}`}
               </MenuItem>
             ))}
@@ -102,8 +102,11 @@ const FlightForm: React.FC<SearchFormProps> = ({
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {passData.map((pass, index) => (
-              <MenuItem key={index} value={`${pass.passenger} - ${pass.class}`}>
+            {passData.map((pass) => (
+              <MenuItem
+                key={pass.id}
+                value={`${pass.passenger} - ${pass.class}`}
+              >
                 {`${pass.passenger} - ${pass.class}`}
               </MenuItem>
             ))}

@@ -55,8 +55,8 @@ const StaysForm: React.FC<SearchFormProps> = ({
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {locationData.map((place, index) => (
-              <MenuItem key={index} value={`${place.to}`}>
+            {locationData.map((place) => (
+              <MenuItem key={place.id} value={`${place.to}`}>
                 {`${place.to}`}
               </MenuItem>
             ))}
@@ -96,8 +96,8 @@ const StaysForm: React.FC<SearchFormProps> = ({
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {passData.map((pass, index) => (
-              <MenuItem key={index} value={`${pass.guest} - ${pass.room}`}>
+            {passData.map((pass) => (
+              <MenuItem key={pass.id} value={`${pass.guest} - ${pass.room}`}>
                 {`${pass.guest} - ${pass.room}`}
               </MenuItem>
             ))}

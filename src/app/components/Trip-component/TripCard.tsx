@@ -6,6 +6,7 @@ import { TripCarBox } from "./TripCardStyle";
 import { TripCardsData } from "@/app/interfaces/Interfaces";
 
 const TripCard: React.FC<TripCardsData> = ({
+  id,
   img,
   title,
   flight,
@@ -13,7 +14,7 @@ const TripCard: React.FC<TripCardsData> = ({
   resort,
 }) => {
   return (
-    <Box sx={{ ...TripCarBox }}>
+    <Box sx={{ ...TripCarBox }} key={id}>
       <Image src={img} alt="Trip Card 1" width={90} height={90} />
       <Box className="card-content">
         <Typography variant="h6" color={"#112211"}>

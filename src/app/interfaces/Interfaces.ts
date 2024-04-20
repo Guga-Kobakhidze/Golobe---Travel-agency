@@ -40,11 +40,13 @@ export interface MainContextType {
 // Form Interfaces
 
 interface FromToData {
+  id: number;
   from?: string;
   to?: string;
 }
 
 interface PassData {
+  id: number;
   passenger?: string;
   class?: string;
   room?: string;
@@ -60,6 +62,7 @@ export interface SearchFormProps {
 // Trip Cards Interfaces
 
 export interface TripCardsData {
+  id: number;
   img: string;
   title: string;
   flight: string;
@@ -94,6 +97,7 @@ export interface ReviewsCardProps {
 // Link Cards interface
 
 export interface LinkCardsData {
+  id: number;
   img: string;
   title: string;
   desc: string;

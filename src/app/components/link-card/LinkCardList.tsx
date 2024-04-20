@@ -9,6 +9,7 @@ const LinkCardList: React.FC<LinkCardsProps> = ({ cardsList }) => {
     <Box sx={{ ...LinkCardComponentBox }}>
       {cardsList.map((card) => (
         <LinkCard
+          id={card.id}
           img={card.img}
           title={card.title}
           desc={card.desc}

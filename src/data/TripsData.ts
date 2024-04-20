@@ -1,5 +1,6 @@
 export const AllTripsData = [
   {
+    id: 1,
     img: "assets/TripCards/TripCard1.svg",
     title: "Istanbul, Turkey",
     flight: "Flights",
@@ -7,6 +8,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 2,
     img: "assets/TripCards/TripCard2.svg",
     title: "Sydney, Australia",
     flight: "Flights",
@@ -14,6 +16,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 3,
     img: "assets/TripCards/TripCard3.svg",
     title: "Baku, Azerbaijan",
     flight: "Flights",
@@ -21,6 +24,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 4,
     img: "assets/TripCards/TripCard4.svg",
     title: "Malé, Maldives",
     flight: "Flights",
@@ -28,6 +32,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 5,
     img: "assets/TripCards/TripCard5.svg",
     title: "Paris, France",
     flight: "Flights",
@@ -35,6 +40,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 6,
     img: "assets/TripCards/TripCard6.svg",
     title: "New York, US",
     flight: "Flights",
@@ -42,6 +48,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 7,
     img: "assets/TripCards/TripCard7.svg",
     title: "London, UK",
     flight: "Flights",
@@ -49,6 +56,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 8,
     img: "assets/TripCards/TripCard8.svg",
     title: "Tokyo, Japan",
     flight: "Flights",
@@ -56,6 +64,7 @@ export const AllTripsData = [
     resort: "Resorts",
   },
   {
+    id: 9,
     img: "assets/TripCards/TripCard9.svg",
     title: "Dubai, UAE",
     flight: "Flights",
@@ -66,12 +75,14 @@ export const AllTripsData = [
 
 export const AllLinksCard = [
   {
+    id: 1,
     img: "assets/LinkCards/flightLinkCard.svg",
     title: "Filghts",
     desc: "Search Flights & Places Hire to our most popular destinations",
     link: "flight",
   },
   {
+    id: 2,
     img: "assets/LinkCards/staysLinkCard.svg",
     title: "Hotels",
     desc: "Search Flights & Places Hire to our most popular destinations",

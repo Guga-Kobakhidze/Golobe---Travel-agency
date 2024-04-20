@@ -9,6 +9,7 @@ const TripCardList: React.FC<TripCardsProps> = ({ cardsList }) => {
     <Box sx={{ ...TripCardsListBox }}>
       {cardsList.map((card) => (
         <TripCard
+          id={card.id}
           img={card.img}
           title={card.title}
           flight={card.flight}

@@ -4,9 +4,9 @@ import { LinkCardBox } from "../Trip-component/TripCardStyle";
 import React from "react";
 import BtnComponent from "../button/BtnComponent";
 
-const LinkCard: React.FC<LinkCardsData> = ({ img, title, desc, link }) => {
+const LinkCard: React.FC<LinkCardsData> = ({ img, title, desc, link, id }) => {
   return (
-    <Box sx={{ ...LinkCardBox(img) }}>
+    <Box sx={{ ...LinkCardBox(img) }} key={id}>
       <Box zIndex={5}>
         <Typography variant="h3" mb={1}>
           {title}
