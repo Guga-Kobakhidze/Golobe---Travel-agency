@@ -54,7 +54,7 @@ const Subscription = () => {
           />
         </Box>
       </Box>
-      <Box>
+      <Box mb={"-26px"}>
         <img src="/assets/subscribeImg.svg" alt="subscrImage" />
       </Box>
     </Box>

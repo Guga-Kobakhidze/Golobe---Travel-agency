@@ -3,7 +3,6 @@ import { SxProps } from "@mui/material";
 export const FooterFormBox: SxProps = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
   color: "#112211",
   padding: "24px",
   backgroundColor: "#CDEAE1",
