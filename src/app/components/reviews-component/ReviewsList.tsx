@@ -21,8 +21,8 @@ const ReviewsList: React.FC<ReviewsCardProps> = ({ reviewCardList }) => {
         className="mySwiper swiper-container"
         loop={true}
       >
-        {reviewCardList.map((card) => (
-          <SwiperSlide>
+        {reviewCardList.map((card, index) => (
+          <SwiperSlide key={`${card.id}-${index}`}>
             <ReviewsCard
               id={card.id}
               title={card.title}
