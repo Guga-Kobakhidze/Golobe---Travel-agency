@@ -94,6 +94,18 @@ export interface ReviewsCardProps {
   reviewCardList: ReviewsCards[];
 }
 
+// FooterNav interface
+
+interface FooterNavs {
+  title: string;
+  link: string;
+}
+
+export interface FooterNavProps {
+  title: string;
+  links: FooterNavs[];
+}
+
 // Link Cards interface
 
 export interface LinkCardsData {
