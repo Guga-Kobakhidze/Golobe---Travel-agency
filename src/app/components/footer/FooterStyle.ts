@@ -29,5 +29,5 @@ export const FooterFormBox: SxProps = {
 
 export const FooterNavStyle: SxProps = {
   bgcolor: "#8DD3BB",
-  padding: "218px 90px 64px",
+  padding: "220px 90px 64px",
 };
